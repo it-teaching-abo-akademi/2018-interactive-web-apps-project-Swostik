@@ -9,6 +9,7 @@
     "react-scripts": "2.1.3",
     "recharts": "^1.4.2"
   },
+  "homepage": "https://it-teaching-abo-akademi.github.io/2018-interactive-web-apps-project-Swostik/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
