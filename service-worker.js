@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/2018-interactive-web-apps-project-Swostik/precache-manifest.8e9c53c06772294a120dc36ab6879687.js"
+  "/2018-interactive-web-apps-project-Swostik/precache-manifest.4753856aa549984f7c2e8913b97d6468.js"
 );
 
 workbox.clientsClaim();
