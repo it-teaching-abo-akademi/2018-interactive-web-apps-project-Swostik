@@ -287,8 +287,8 @@ class Portfolio extends React.Component {
 
   render() {
     return (
-      <div className="portfolio">
-        <div>{this.props.name}</div>
+      <div className="ui fluid container portfolio">
+        <div><h1>{this.props.name}</h1></div>
 
       {/* input text and quantity only shown when adding a new stock*/}
         {this.state.show &&
@@ -299,11 +299,11 @@ class Portfolio extends React.Component {
         </div>
         }
 
-        <button onClick={() => this.changeToEuro()}>Show in €</button>
-        <button onClick={() => this.changeToDollar()}>Show in $</button>
-        <button onClick={() => this.refresh()}>Refresh</button>
+        <button onClick={() => this.changeToEuro()}><i class="euro sign icon"></i></button>
+        <button onClick={() => this.changeToDollar()}><i class="dollar sign icon"></i></button>
+        <button onClick={() => this.refresh()}><i class="redo icon"></i></button>
         {/* button to delete the portfolio*/}
-        <button className="bt" onClick={() => this.props.onClick(this.props.id)}>X</button>
+        <button className="bt" onClick={() => this.props.onClick(this.props.id)}><i class="window close icon"></i></button>
         {/* stock table */}
         <table width = "500">
           <thead>
@@ -354,6 +354,7 @@ class Stock extends React.Component {
   render() {
     return (
       <tr >
+
         <td align= "center">{this.props.name}</td>
         <td align= "center">{this.props.value}</td>
         <td align= "center">{this.props.quantity}</td>

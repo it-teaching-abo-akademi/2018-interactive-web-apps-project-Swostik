@@ -89,29 +89,33 @@ class Page extends React.Component {
       <div>
         {/* max number of portfolio is 10 */}
         {this.state.portList.length < 10 &&
-        <button onClick={() => this.setState({show:true}) }> Add a Portfolio </button>}
+        <button className="ui primary button" onClick={() => this.setState({show:true}) }>
+        <i class="plus icon"></i>Add a Portfolio </button>}
         {/* input text only shown when adding a new portfolio*/}
         {this.state.show &&
-          <div>
+          <div className="ui input">
             <input type="text" placeholder="Portfolio name" value={this.state.value} onChange={this.handleChange.bind(this)} />
             <button onClick={() => this.addPortFolio(this.state.value,this.state.count,true)}>Validate</button>
           </div>
         }
         {/* 4 rows of portfolios with unique keys*/}
         <div className="portfoliopanel">
-          {this.state.portList.slice(0,3).map(portfolio => <div key={portfolio.props.id}> {portfolio} </div>)}
+          {this.state.portList.slice(0,2).map(portfolio => <div key={portfolio.props.id}> {portfolio} </div>)}
         </div>
         <br/><br/>
         <div className="portfoliopanel">
-          {this.state.portList.slice(3,6).map(portfolio => <div key={portfolio.props.id}> {portfolio} </div>)}
+          {this.state.portList.slice(2,4).map(portfolio => <div key={portfolio.props.id}> {portfolio} </div>)}
         </div>
         <br/><br/>
         <div className="portfoliopanel">
-          {this.state.portList.slice(6,9).map(portfolio => <div key={portfolio.props.id}> {portfolio} </div>)}
+          {this.state.portList.slice(4,6).map(portfolio => <div key={portfolio.props.id}> {portfolio} </div>)}
         </div>
         <br/><br/>
         <div className="portfoliopanel">
-          {this.state.portList.slice(9).map(portfolio => <div key={portfolio.props.id}> {portfolio} </div>)}
+          {this.state.portList.slice(6,8).map(portfolio => <div key={portfolio.props.id}> {portfolio} </div>)}
+        </div>
+        <div className="portfoliopanel">
+          {this.state.portList.slice(8,10).map(portfolio => <div key={portfolio.props.id}> {portfolio} </div>)}
         </div>
       </div>
     );
